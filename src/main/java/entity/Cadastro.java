@@ -20,5 +20,63 @@ public class Cadastro extends Pessoa implements Serializable {
     private String Fiador;
     private int cnpfFranquiado;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public Integer getIdf() {
+        return idf;
+    }
+
+    public void setIdf(Integer idf) {
+        this.idf = idf;
+    }
+
+    public int getId_cadastro() {
+        return id_cadastro;
+    }
+
+    public void setId_cadastro(int id_cadastro) {
+        this.id_cadastro = id_cadastro;
+    }
+
+    public int getCnpfFranquia() {
+        return cnpfFranquia;
+    }
+
+    public void setCnpfFranquia(int cnpfFranquia) {
+        this.cnpfFranquia = cnpfFranquia;
+    }
+
+    public String getNomeFantasiaFranq() {
+        return NomeFantasiaFranq;
+    }
+
+    public void setNomeFantasiaFranq(String nomeFantasiaFranq) {
+        NomeFantasiaFranq = nomeFantasiaFranq;
+    }
+
+    public String getRazaosocialFranquia() {
+        return RazaosocialFranquia;
+    }
+
+    public void setRazaosocialFranquia(String razaosocialFranquia) {
+        RazaosocialFranquia = razaosocialFranquia;
+    }
+
+    public String getFiador() {
+        return Fiador;
+    }
+
+    public void setFiador(String fiador) {
+        Fiador = fiador;
+    }
+
+    public int getCnpfFranquiado() {
+        return cnpfFranquiado;
+    }
+
+    public void setCnpfFranquiado(int cnpfFranquiado) {
+        this.cnpfFranquiado = cnpfFranquiado;
+    }
 }

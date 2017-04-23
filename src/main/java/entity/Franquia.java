@@ -20,28 +20,63 @@ public class Franquia implements Serializable {
     private int captaldegirominimo;
     private String ramo;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public Integer getIdf() {
+        return idf;
+    }
 
+    public void setIdf(Integer idf) {
+        this.idf = idf;
+    }
 
+    public int getId_franquia() {
+        return id_franquia;
+    }
 
+    public void setId_franquia(int id_franquia) {
+        this.id_franquia = id_franquia;
+    }
 
+    public int getCnpj() {
+        return cnpj;
+    }
 
+    public void setCnpj(int cnpj) {
+        this.cnpj = cnpj;
+    }
 
+    public String getNomefantasia() {
+        return nomefantasia;
+    }
 
+    public void setNomefantasia(String nomefantasia) {
+        this.nomefantasia = nomefantasia;
+    }
 
+    public int getValorminimo() {
+        return valorminimo;
+    }
 
+    public void setValorminimo(int valorminimo) {
+        this.valorminimo = valorminimo;
+    }
 
+    public int getCaptaldegirominimo() {
+        return captaldegirominimo;
+    }
 
+    public void setCaptaldegirominimo(int captaldegirominimo) {
+        this.captaldegirominimo = captaldegirominimo;
+    }
 
+    public String getRamo() {
+        return ramo;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public void setRamo(String ramo) {
+        this.ramo = ramo;
+    }
 }
