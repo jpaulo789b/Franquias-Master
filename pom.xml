@@ -14,7 +14,14 @@
     </org.springframework.version>
   </properties>
   <dependencies>
-    <dependency>
+
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.12</version>
+      </dependency>
+
+      <dependency>
       <groupId>com.sun.faces</groupId>
       <artifactId>jsf-api</artifactId>
       <version>2.1.6</version>
