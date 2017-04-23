@@ -2,15 +2,13 @@ package entity;
 
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by harlock on 23/04/17.
  */
+@Entity
 public class Imovel implements Serializable {
     private static final long serialVersionUID = -370016001147031854L;
     @Id

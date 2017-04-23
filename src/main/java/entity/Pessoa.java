@@ -1,10 +1,12 @@
 package entity;
 
+import javax.persistence.Entity;
 import java.util.Date;
 
 /**
  * Created by harlock on 23/04/17.
  */
+@Entity
 public class Pessoa {
 
     private int id_pessoa;
