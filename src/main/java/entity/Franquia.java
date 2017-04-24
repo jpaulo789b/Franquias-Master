@@ -12,8 +12,7 @@ public class Franquia implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_FRANQUIA")
-    private Integer idf;
-    private int id_franquia;
+    private Integer id_franquia;
     private int cnpj;
     private String nomefantasia;
     private int valorminimo;
@@ -26,13 +25,7 @@ public class Franquia implements Serializable {
         return serialVersionUID;
     }
 
-    public Integer getIdf() {
-        return idf;
-    }
 
-    public void setIdf(Integer idf) {
-        this.idf = idf;
-    }
 
     public int getId_franquia() {
         return id_franquia;
