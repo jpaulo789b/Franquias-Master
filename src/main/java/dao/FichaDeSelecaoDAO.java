@@ -52,4 +52,8 @@ public class FichaDeSelecaoDAO {
         entityManager.remove(fichaDeSelecao);
         return fichaDeSelecao;
     }
+
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 }

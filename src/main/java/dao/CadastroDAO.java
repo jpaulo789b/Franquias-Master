@@ -54,4 +54,8 @@ public class CadastroDAO {
         entityManager.remove(cadastro);
         return cadastro;
     }
+
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 }

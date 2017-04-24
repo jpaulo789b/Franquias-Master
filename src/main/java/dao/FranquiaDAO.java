@@ -55,4 +55,8 @@ public class FranquiaDAO {
         entityManager.remove(franquia);
         return franquia;
     }
+
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 }

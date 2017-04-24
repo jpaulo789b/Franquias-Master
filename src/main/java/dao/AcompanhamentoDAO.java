@@ -19,14 +19,14 @@ public class AcompanhamentoDAO {
 
     @Transactional(readOnly=true)
     public List<Acompanhamento> retornaTodos(){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from Acompanhamento c order by c.id_acompanhamento";
         Query query = entityManager.createQuery(jpql);
         List<Acompanhamento> acompanhamentos = (List<Acompanhamento>) query.getResultList();
         return acompanhamentos;
     }
     @Transactional(readOnly=true)
     public List<Acompanhamento> retornaTodos(int idFranqueado){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from Acompanhamento c order by c.id_acompanhamento";
         Query query = entityManager.createQuery(jpql);
         List<Acompanhamento> acompanhamentos = (List<Acompanhamento>) query.getResultList();
         return acompanhamentos;
