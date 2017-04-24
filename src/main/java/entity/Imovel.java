@@ -25,6 +25,8 @@ public class Imovel implements Serializable {
     @Column
     private Boolean imovelPropio;
 
+    private Pessoa pessoa;
+    private Franquia franquia;
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
@@ -59,5 +61,21 @@ public class Imovel implements Serializable {
 
     public void setImovelPropio(Boolean imovelPropio) {
         this.imovelPropio = imovelPropio;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Franquia getFranquia() {
+        return franquia;
+    }
+
+    public void setFranquia(Franquia franquia) {
+        this.franquia = franquia;
     }
 }

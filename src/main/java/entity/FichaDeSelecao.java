@@ -22,6 +22,7 @@ public class FichaDeSelecao  implements Serializable {
     @Type(type="true_false")
     @Column
     private Boolean nomeLimpo;
+    private Franquia franquia;
     private String endereco_da_franquia;
 
     public static long getSerialVersionUID() {
@@ -82,5 +83,13 @@ public class FichaDeSelecao  implements Serializable {
 
     public void setEndereco_da_franquia(String endereco_da_franquia) {
         this.endereco_da_franquia = endereco_da_franquia;
+    }
+
+    public Franquia getFranquia() {
+        return franquia;
+    }
+
+    public void setFranquia(Franquia franquia) {
+        this.franquia = franquia;
     }
 }
