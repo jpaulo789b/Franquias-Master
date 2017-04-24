@@ -18,21 +18,27 @@ public class FichaDeSelecaoDAO {
     protected EntityManager entityManager;
     @Transactional(readOnly=true)
     public List<FichaDeSelecao> retornaTodos(){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from FichaDeSelecao c " +
+                "INNER JOIN c.Franquia F WEHRE F.ID_FRANQUIA = C.ID_FRANQUIA " +
+                "order by c.nome";
         Query query = entityManager.createQuery(jpql);
         List<FichaDeSelecao> acompanhamentos = (List<FichaDeSelecao>) query.getResultList();
         return acompanhamentos;
     }
     @Transactional(readOnly=true)
-    public List<FichaDeSelecao> retornaTodos(int idFranqueado){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+    public List<FichaDeSelecao> retornaTodos(int ID_FICHADESELECAO){
+        String jpql = " SELECT c from FichaDeSelecao c " +
+                "INNER JOIN c.Franquia F WEHRE F.ID_FRANQUIA = C.ID_FRANQUIA " +
+                "WHERE c.ID_FICHADESELECAO = :ID_FICHADESELECAO" +
+                "order by c.ID_FICHADESELECAO";
         Query query = entityManager.createQuery(jpql);
+        query.setParameter("ID_CADASTRO", ID_FICHADESELECAO);
         List<FichaDeSelecao> acompanhamentos = (List<FichaDeSelecao>) query.getResultList();
         return acompanhamentos;
     }
     @Transactional(readOnly=true)
     public FichaDeSelecao retornaEspecifico(int id){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from FichaDeSelecao c order by c.ID_FRANQUIA";
         Query query = entityManager.createQuery(jpql);
         FichaDeSelecao acompanhamentos = (FichaDeSelecao) query.getSingleResult();
         return acompanhamentos;

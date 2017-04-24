@@ -1,7 +1,6 @@
 package dao;
 
 import entity.Cadastro;
-import entity.FichaDeSelecao;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,21 +19,23 @@ public class CadastroDAO {
 
     @Transactional(readOnly=true)
     public List<Cadastro> retornaTodos(){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from Cadastro c order by c.ID_CADASTRO";
         Query query = entityManager.createQuery(jpql);
         List<Cadastro> cadastros = (List<Cadastro>) query.getResultList();
         return cadastros;
     }
     @Transactional(readOnly=true)
-    public List<Cadastro> retornaPorId(int id){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+    public List<Cadastro> retornaPorId(int ID_CADASTRO){
+        String jpql = " SELECT c from Cadastro c order by c.ID_CADASTRO" +
+                "WHERE c.ID_CADASTRO = :ID_CADASTRO";
         Query query = entityManager.createQuery(jpql);
+        query.setParameter("ID_CADASTRO", ID_CADASTRO);
         List<Cadastro> cadastro = (List<Cadastro>) query.getResultList();
         return cadastro;
     }
     @Transactional(readOnly=true)
     public Cadastro retornaEspecifico(int id){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from Cadastro c order by c.nome";
         Query query = entityManager.createQuery(jpql);
         Cadastro cadastro = (Cadastro) query.getSingleResult();
         return cadastro;

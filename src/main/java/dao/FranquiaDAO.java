@@ -20,7 +20,7 @@ public class FranquiaDAO {
 
     @Transactional(readOnly=true)
     public List<Franquia> retornaTodos(){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from Franquia c order by c.ID_FRANQUIA";
         Query query = entityManager.createQuery(jpql);
         List<Franquia> acompanhamentos = (List<Franquia>) query.getResultList();
         return acompanhamentos;
@@ -28,14 +28,16 @@ public class FranquiaDAO {
 
     @Transactional(readOnly=true)
     public List<Franquia> retornaTodos(int idFranqueado){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from Franquia c order by c.ID_FRANQUIA" +
+                " WHERE c.ID_FRANQUIA = :ID_FRANQUIA";
         Query query = entityManager.createQuery(jpql);
+        query.setParameter("ID_FRANQUIA", idFranqueado);
         List<Franquia> acompanhamentos = (List<Franquia>) query.getResultList();
         return acompanhamentos;
     }
     @Transactional(readOnly=true)
     public Franquia retornaEspecifico(int id){
-        String jpql = " SELECT c from Acompanhamento c order by c.nome";
+        String jpql = " SELECT c from Franquia c order by c.nome";
         Query query = entityManager.createQuery(jpql);
         Franquia acompanhamentos = (Franquia) query.getSingleResult();
         return acompanhamentos;
