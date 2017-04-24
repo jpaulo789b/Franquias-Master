@@ -25,7 +25,7 @@ public class CadastroDAO {
         return cadastros;
     }
     @Transactional(readOnly=true)
-    public List<Cadastro> retornaPorId(int ID_CADASTRO){
+    public List<Cadastro> retornaTodos(int ID_CADASTRO){
         String jpql = " SELECT c from Cadastro c order by c.ID_CADASTRO" +
                 "WHERE c.ID_CADASTRO = :ID_CADASTRO";
         Query query = entityManager.createQuery(jpql);
