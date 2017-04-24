@@ -30,7 +30,7 @@ public class PessoaDAO {
     }
 
     @Transactional(readOnly=true)
-    public List<Pessoa> retornaTodos(int idFranqueado){
+    public List<Pessoa> retornaTodos(int idPessoa){
         String jpql = "SELECT c from Pessoa c order by c.nome";
         Query query = entityManager.createQuery(jpql);
         List<Pessoa> pessoas = (List<Pessoa>) query.getResultList();
