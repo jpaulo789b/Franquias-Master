@@ -13,6 +13,7 @@ import java.util.Date;
 public class App {
 
     public static void main(String [] args){
+        System.out.println("OlAR");
         PessoaService ps = new PessoaService();
         Pessoa p= new Pessoa();
 
