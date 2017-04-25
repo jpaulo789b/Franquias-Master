@@ -1,11 +1,11 @@
 package services;
 
 import dao.PesquisaMercadoDAO;
-import entity.PesquisaMercado;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
+import entity.PesquisaDeMercado;
 import java.util.List;
 
 /**

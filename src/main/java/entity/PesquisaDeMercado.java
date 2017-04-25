@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
  * @author aluno
  */
 @Entity
-public class PesquiaDeMercado {
+public class PesquisaDeMercado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,6 +1,6 @@
 package dao;
 
-import entity.PesquisaMercado;
+import entity.PesquisaDeMercado;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,39 +22,39 @@ public class PesquisaMercadoDAO {
     }
 
     @Transactional(readOnly=true)
-    public List<PesquisaMercado> retornaTodos(){
+    public List<PesquisaDeMercado> retornaTodos(){
         String jpql = "SELECT c from PesquisaMercado c order by c.nome";
         Query query = entityManager.createQuery(jpql);
-        List<PesquisaMercado> pesquisamercados = (List<PesquisaMercado>) query.getResultList();
+        List<PesquisaDeMercado> pesquisamercados = (List<PesquisaDeMercado>) query.getResultList();
         return pesquisamercados;
     }
 
     @Transactional(readOnly=true)
-    public List<PesquisaMercado> retornaTodos(int idFranqueado){
+    public List<PesquisaDeMercado> retornaTodos(int idFranqueado){
         String jpql = "SELECT c from PesquisaMercado c order by c.nome";
         Query query = entityManager.createQuery(jpql);
-        List<PesquisaMercado> pesquisamercados = (List<PesquisaMercado>) query.getResultList();
+        List<PesquisaDeMercado> pesquisamercados = (List<PesquisaDeMercado>) query.getResultList();
         return pesquisamercados;
     }
     @Transactional(readOnly=true)
-    public PesquisaMercado retornaEspecifico(int id){
+    public PesquisaDeMercado retornaEspecifico(int id){
         String jpql = "SELECT c from PesquisaMercado c order by c.nome";
         Query query = entityManager.createQuery(jpql);
-        PesquisaMercado pesquisamercados = (PesquisaMercado) query.getSingleResult();
+        PesquisaDeMercado pesquisamercados = (PesquisaDeMercado) query.getSingleResult();
         return pesquisamercados;
     }
     @Transactional
-    public PesquisaMercado inserirPesquisaMercado(PesquisaMercado PesquisaMercado){
+    public PesquisaDeMercado inserirPesquisaMercado(PesquisaDeMercado PesquisaMercado){
         entityManager.persist(PesquisaMercado);
         return PesquisaMercado;
     }
     @Transactional
-    public PesquisaMercado updatePesquisaMercado(PesquisaMercado PesquisaMercado){
+    public PesquisaDeMercado updatePesquisaMercado(PesquisaDeMercado PesquisaMercado){
         entityManager.merge(PesquisaMercado);
         return PesquisaMercado;
     }
     @Transactional
-    public PesquisaMercado deletePesquisaMercado(PesquisaMercado PesquisaMercado){
+    public PesquisaDeMercado deletePesquisaMercado(PesquisaDeMercado PesquisaMercado){
         entityManager.remove(PesquisaMercado);
         return PesquisaMercado;
     }

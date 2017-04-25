@@ -3,12 +3,15 @@
  */
 package entity;
 
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * @author aluno
@@ -22,7 +25,14 @@ public class Pessoa {
 
     @Basic
     private long cpf;
-
+        
+    @Basic
+    private String nome;
+    
+    @Basic
+    @Temporal(TemporalType.DATE)
+    private Date Dtnasc;
+    
     @Basic
     private String email;
 
@@ -94,4 +104,21 @@ public class Pessoa {
         this.cadastro = cadastro;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Date getDtnasc() {
+        return Dtnasc;
+    }
+
+    public void setDtnasc(Date Dtnasc) {
+        this.Dtnasc = Dtnasc;
+    }
+    
+    
 }
