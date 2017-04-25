@@ -4,9 +4,7 @@ import entity.Pessoa;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -19,7 +17,8 @@ public class PessoaDAO {
 
     public void setEntityManager(
             EntityManager entityManager) {
-        this.entityManager = entityManager;
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("franquiaPu");
+        this.entityManager = entityManager = factory.createEntityManager();
     }
     @Transactional(readOnly=true)
     public List<Pessoa> retornaTodos(){
