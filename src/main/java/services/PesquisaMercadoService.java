@@ -20,23 +20,23 @@ public class PesquisaMercadoService {
     private PesquisaMercadoDAO dao;
 
     @Transactional
-    public List<PesquisaMercado> getAllPesquisaMercados(){
+    public List<PesquisaDeMercado> getAllPesquisaMercados(){
         return dao.retornaTodos();
     }
     @Transactional
-    public List<PesquisaMercado> getPesquisaMercadosByNome(Integer idPesquisamercado){
+    public List<PesquisaDeMercado> getPesquisaMercadosByNome(Integer idPesquisamercado){
         return dao.retornaTodos(idPesquisamercado);
     }
     @Transactional
-    public PesquisaMercado createPesquisaMercado(PesquisaMercado PesquisaMercado){
+    public PesquisaDeMercado createPesquisaMercado(PesquisaDeMercado PesquisaMercado){
         return dao.inserirPesquisaMercado(PesquisaMercado);
     }
     @Transactional
-    public void updatePesquisaMercado(PesquisaMercado PesquisaMercado){
+    public void updatePesquisaMercado(PesquisaDeMercado PesquisaMercado){
         dao.updatePesquisaMercado(PesquisaMercado);
     }
     @Transactional
-    public void deletePesquisaMercado(PesquisaMercado PesquisaMercado){
+    public void deletePesquisaMercado(PesquisaDeMercado PesquisaMercado){
         dao.deletePesquisaMercado(PesquisaMercado);
     }
 
