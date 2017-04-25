@@ -4,6 +4,7 @@
 package entity;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,22 +21,22 @@ public class FichaDeSelecao {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Basic
+    @Column
     private float montanteInicial;
 
-    @Basic
+    @Column
     private String pais;
 
-    @Basic
+    @Column
     private String estado;
 
-    @Basic
+    @Column
     private String cidade;
 
-    @Basic
+    @Column
     private boolean nomeLimpo;
 
-    @Basic
+    @Column
     private String endereco_da_franquia;
 
     @OneToOne(targetEntity = Franquia.class)

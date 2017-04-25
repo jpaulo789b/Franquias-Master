@@ -4,6 +4,7 @@
 package entity;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,19 +20,19 @@ public class Cadastro {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Basic
+    @Column
     private String cnpfFranquia;
 
-    @Basic
+    @Column
     private String nomeFantasiaFranq;
 
-    @Basic
+    @Column
     private String razaosocialFranquia;
 
-    @Basic
+    @Column
     private String fiador;
 
-    @Basic
+    @Column
     private String cnpfFranquiado;
 
     public Long getId() {

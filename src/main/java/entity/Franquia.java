@@ -4,6 +4,7 @@
 package entity;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,19 +21,19 @@ public class Franquia {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Basic
+    @Column
     private long cnpj;
 
-    @Basic
+    @Column
     private String nomefantasia;
 
-    @Basic
+    @Column
     private float valorminimo;
 
-    @Basic
+    @Column
     private float captaldegirominimo;
 
-    @Basic
+    @Column
     private String ramo;
 
     @OneToOne(targetEntity = Cadastro.class)

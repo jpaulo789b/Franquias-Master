@@ -5,6 +5,7 @@ package entity;
 
 import java.util.Date;
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,26 +24,26 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Basic
+    @Column
     private long cpf;
         
-    @Basic
+    @Column
     private String nome;
     
-    @Basic
+    @Column
     @Temporal(TemporalType.DATE)
     private Date Dtnasc;
     
-    @Basic
+    @Column
     private String email;
 
-    @Basic
+    @Column
     private long rg;
 
-    @Basic
+    @Column
     private String telefone;
 
-    @Basic
+    @Column
     private String telefoneSecundario;
 
     @OneToOne(targetEntity = Cadastro.class)

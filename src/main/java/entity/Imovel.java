@@ -4,6 +4,7 @@
 package entity;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,13 +22,13 @@ public class Imovel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Basic
+    @Column
     private Boolean localVistoriado;
 
-    @Basic
+    @Column
     private Boolean pesquisaDeMercado;
 
-    @Basic
+    @Column
     private boolean imovelPropio;
 
     @OneToOne(targetEntity = Franquia.class)
