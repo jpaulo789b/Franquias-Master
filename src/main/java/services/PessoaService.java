@@ -17,7 +17,7 @@ import java.util.List;
 public class PessoaService {
 
     @Autowired
-    private PessoaDAO dao;
+    private PessoaDAO dao = new PessoaDAO();
 
     @Transactional
     public List<Pessoa> getAllPessoas(){

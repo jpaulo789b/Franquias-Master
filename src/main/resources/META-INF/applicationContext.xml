@@ -34,7 +34,7 @@
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" />
                 <property name="showSql" value="true" />
-                <property name="hibernate.hbm2ddl.auto" value="update" />
+                <property name="hibernate.hbm2ddl.auto" value="create" />
             </bean>
         </property>
     </bean>

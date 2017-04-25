@@ -1,6 +1,9 @@
 import entity.Pessoa;
 import services.PessoaService;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -18,6 +21,9 @@ public class App {
         p.setEmail("roselvmna@asodk.com");
         p.setRg(2549925);
         p.setTelefone("552525252");
+
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("franquiaPu");
+        EntityManager entityManager = factory.createEntityManager();
         try{
             ps.createPessoa(p);
 
