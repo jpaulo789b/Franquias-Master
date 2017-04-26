@@ -1,3 +1,5 @@
+package executar;
+
 import entity.Pessoa;
 import services.PessoaService;
 
@@ -10,6 +12,7 @@ import java.util.Date;
 /**
  * Created by Pichau on 23/04/2017.
  */
+
 public class App {
 
     public static void main(String [] args){

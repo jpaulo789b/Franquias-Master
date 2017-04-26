@@ -17,8 +17,8 @@ public class PessoaDAO {
 
     public void setEntityManager(
             EntityManager entityManager) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("franquiaPu");
-        this.entityManager = entityManager = factory.createEntityManager();
+        //EntityManagerFactory factory = Persistence.createEntityManagerFactory("franquiaPu");
+        this.entityManager = entityManager;//= factory.createEntityManager();
     }
     @Transactional(readOnly=true)
     public List<Pessoa> retornaTodos(){
